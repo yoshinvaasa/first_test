@@ -16,6 +16,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from read_function import obtain_fixtures_tables
 from action_functions import *
+import automatic_coach_selenium
 
 # Create driver and give url address
 driver = webdriver.Firefox()
@@ -27,17 +28,21 @@ assert "Rocking Soccer" in driver.title
 # Log into the game
 login(driver)
 
-
-# Go to next match
-time.sleep(1.5)
+# Go to the matches section
+time.sleep(3)
 myMatches_elem = driver.find_element_by_id('menu-entry-friendlies')
 myMatches_elem.send_keys(Keys.RETURN)
-#next_game_elem = driver.find_element_by_class_name('lineup-link')
-#next_game_elem.send_keys(Keys.RETURN)
-
 
 # Read next matches
 table_upcoming , table_recent = obtain_fixtures_tables(driver)
+
+
+# Select line-up ONLY for next match
+line_up_name = '1: first tactic'
+select_lineup_next_match(driver, line_up_name)
+
+# Get free tickets
+get_free_tickets(driver)
 
 
 # Logout and shutdown web browser
@@ -45,19 +50,7 @@ logout(driver)
 shutdown(driver)
 
 
+    
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-# Python function syntax 
-#def function_name(arguments):
-#    
-#    
-#    return outputs
