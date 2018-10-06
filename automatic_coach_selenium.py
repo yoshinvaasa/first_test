@@ -37,14 +37,12 @@ myMatches_elem.send_keys(Keys.RETURN)
 
 
 # Read next matches
-table,table2 = obtain_fixtures_tables(driver)
+table_upcoming , table_recent = obtain_fixtures_tables(driver)
 
 
 # Logout and shutdown web browser
 logout(driver)
 shutdown(driver)
-
-
 
 
 
