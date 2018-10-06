@@ -15,7 +15,7 @@ def login(driver):
     # Login function
     #
     # Input: driver, in the main page of rocking soccer
-    
+    time.sleep(1)
     username_elem = driver.find_element_by_name('username')
     password_elem = driver.find_element_by_name('password')
     #login_elem = driver.find_element_by_name('login')
@@ -23,7 +23,9 @@ def login(driver):
     
     username,password = get_credentials()
     username_elem.send_keys(username)
+    time.sleep(1)
     password_elem.send_keys(password)
+    time.sleep(1)
     password_elem.send_keys(Keys.RETURN)
 
 
