@@ -547,3 +547,91 @@ GeckoDriver.prototype.get@chrome://marionette/content/driver.js:1072:3
 1538936267539	Marionette	WARN	TLS certificate errors will be ignored for this session
 [Parent 19426, Gecko_IOThread] WARNING: pipe error (74): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1538942656549	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.YSX2pnWQGNiC"
+1538942659385	Marionette	INFO	Listening on port 41141
+1538942659458	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "TypeError: currentNode is null: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11\nonMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37\nemit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29\nWalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7\n"
+TypeError: currentNode is null: canMutationImpactCurrentStyles@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:64:11
+onMutations@resource://devtools/shared/base-loader.js -> resource://devtools/client/inspector/shared/style-change-tracker.js:82:11
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:178:37
+emit@resource://devtools/shared/base-loader.js -> resource://devtools/shared/event-emitter.js:255:29
+WalkerFront<.getMutations</<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/fronts/inspector.js:420:7
+
+[Parent 21628, Gecko_IOThread] WARNING: pipe error (68): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1538943311634	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.yj80ezdbFa0O"
+1538943314430	Marionette	INFO	Listening on port 45883
+1538943314445	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 22141, Gecko_IOThread] WARNING: pipe error (71): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1538943509254	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.dL4hnWkVXUIU"
+1538943511921	Marionette	INFO	Listening on port 42073
+1538943511964	Marionette	WARN	TLS certificate errors will be ignored for this session
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1538943777004	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.NImLtL44VWkE"
+1538943779639	Marionette	INFO	Listening on port 45203
+1538943779721	Marionette	WARN	TLS certificate errors will be ignored for this session
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1538944097017	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.t0lyxwNzrKnF"
+1538944099618	Marionette	INFO	Listening on port 44826
+1538944099631	Marionette	WARN	TLS certificate errors will be ignored for this session
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1538944382259	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.dw9IvWc5OYdV"
+1538944384894	Marionette	INFO	Listening on port 42096
+1538944384970	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 23943, Gecko_IOThread] WARNING: pipe error (70): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
