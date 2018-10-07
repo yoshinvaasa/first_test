@@ -13,7 +13,10 @@ from credentials import get_credentials
 
 
 def get_free_tickets(driver):
+    
+    
     time.sleep(3)
+    
     free_tickets_elem = driver.find_element_by_class_name("tickets-link")
     free_tickets_elem.send_keys(Keys.RETURN)
     

@@ -14,9 +14,8 @@ import time
 import numpy as np
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from read_function import obtain_fixtures_tables
+from read_function import * 
 from action_functions import *
-import automatic_coach_selenium
 
 # Create driver and give url address
 driver = webdriver.Firefox()
@@ -38,12 +37,24 @@ table_upcoming , table_recent = obtain_fixtures_tables(driver)
 
 
 # Select line-up ONLY for next match
-line_up_name = '1: first tactic'
-select_lineup_next_match(driver, line_up_name)
+#line_up_name = '1: first tactic'
+#select_lineup_next_match(driver, line_up_name)
 
 # Get free tickets
-get_free_tickets(driver)
+#myMatches_elem = driver.find_element_by_id('menu-entry-friendlies')
+#myMatches_elem.send_keys(Keys.RETURN)
+#get_free_tickets(driver)
 
+
+
+######################### Read financial information
+time.sleep(3)
+finances_elem = driver.find_element_by_id('menu-entry-finances')
+finances_elem.click()
+balance_sheet_pd_table, account_table_pd = obtain_finance_tables(driver)
+
+
+    
 
 # Logout and shutdown web browser
 logout(driver)
