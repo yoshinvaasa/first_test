@@ -10,7 +10,33 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from credentials import get_credentials
+import numpy as np
 
+def read_and_get_help_tables(driver):
+    
+    time.sleep(3)
+    # Get the Help/Facilities page tabs just under "Facilities reference table"
+    facilities_reference_table_menu = driver.find_element_by_xpath('/html/body/div[3]/div[1]/div[2]/div/ul')
+    all_tabs = facilities_reference_table_menu.find_elements_by_xpath("./*/*")
+    
+    
+    text = 'Export table to csv/Excel'
+    
+    for i in np.arange(0,len(all_tabs)):
+        time.sleep(2)
+        facilities_reference_table_menu = driver.find_element_by_xpath('/html/body/div[3]/div[1]/div[2]/div/ul')
+        all_tabs = facilities_reference_table_menu.find_elements_by_xpath("./*/*")
+        
+        time.sleep(2)
+        current_tab = all_tabs[i]
+        current_tab.click()
+        time.sleep(2)
+        export_to_csv = driver.find_elements_by_link_text(text)
+        
+        for i_down_button in np.arange(len(export_to_csv)):
+            time.sleep(2)
+            down_button = export_to_csv[i_down_button]
+            down_button.click()
 
 def get_free_tickets(driver):
     

@@ -111,8 +111,8 @@ def obtain_finance_tables(driver):
     col2_3 = pd.DataFrame( x['Amount ()'].str.split('(',1).tolist() )
     col5_6 = pd.DataFrame(x['Amount2 ()'].str.split('(',1).tolist())
     x = pd.concat([x['Type'],col2_3, x['Type2'],col5_6],axis=1)
-    x.columns = ['Income', 'Amount (€)','Compared to last year (€)', 
-                 'Expense', 'Amount2 (€)','Compared to last year2 (€)']
+    x.columns = ['Income', 'Amount (€)','Weekly (€)', 
+                 'Expense', 'Amount2 (€)','Weekly_ (€)']
     
     y = x[x.columns[1]]
     for i in np.arange(0,len(y)):
