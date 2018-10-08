@@ -12,6 +12,7 @@ Created on Fri Oct  5 21:32:10 2018
 
 import time
 import numpy as np
+import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from read_function import * 
@@ -36,6 +37,11 @@ assert "Rocking Soccer" in driver.title
 
 # Log into the game
 login(driver)
+
+# Confirm the cookie alert
+time.sleep(6)
+cookie_accept_button = driver.find_element_by_css_selector('.cc-btn')
+cookie_accept_button.click()
 
 # Go to the matches section
 time.sleep(3)
@@ -69,20 +75,49 @@ time.sleep(3)
 finances_elem = driver.find_element_by_id('menu-entry-players')
 finances_elem.click()
 
-# players_data = download_and_read_players_data(driver)
+## players_data = download_and_read_players_data(driver)
+
+#    
+#time.sleep(2)
+#export_to_csv = driver.find_elements_by_class_name('submit')
+#export_to_csv = export_to_csv[2]
+#export_to_csv.click()
+#
+## Read csv file
+#file_name = time.strftime('%Y_%m_%d') + '_players.csv'
+#file_name = '2018_10_07_players.csv'
+#players_data = pd.read_csv(file_name, sep=';')
+
+
+# Read Facilities page
 time.sleep(3)
-cookie_accept_button = driver.find_element_by_css_selector('.cc-btn')
-cookie_accept_button.click()
-    
+facilities_elem = driver.find_element_by_id('menu-entry-facilities')
+facilities_elem.click()
+
+# Read Help page
+help_elem = driver.find_element_by_id('menu-entry-help')
+help_elem.click()
 time.sleep(2)
-export_to_csv = driver.find_elements_by_class_name('submit')
-export_to_csv = export_to_csv[2]
+facilities_help = driver.find_element_by_css_selector('ul.menu:nth-child(2) > li:nth-child(2) > a:nth-child(1)' )
+facilities_help.click()
+
+# Export files from help page help/facilities - WORK IN PROGRESS
+time.sleep(2)
+export_to_csv = driver.find_elements_by_class_name('button')
+export_to_csv = export_to_csv[1]
 export_to_csv.click()
 
-# Read csv file
-file_name = time.strftime('%Y_%m_%d') + '_players.csv'
-players_data = pd.read_csv(file_name, sep=';')
+time.sleep(3)
+facilities_reference_table_menu = driver.find_element_by_xpath('/html/body/div[3]/div[1]/div[2]/div/ul')
+all_tabs = facilities_reference_table_menu.find_elements_by_xpath("./*")
 
+for i in np.arange(0,all_tabs):
+    current_tab = all_tabs[i]
+    current_tab.click()
+    
+#/html/body/div[3]/div[1]/div[2]/div/ul/li[3]/a
+#/html/body/div[3]/div[1]/div[2]/div/ul/li[2]/a
+#/html/body/div[3]/div[1]/div[2]/div/ul
 
 # Logout and shutdown web browser
 logout(driver)
