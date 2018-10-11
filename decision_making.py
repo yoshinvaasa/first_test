@@ -9,8 +9,20 @@ Created on Mon Oct  8 22:09:03 2018
 import numpy as np
 import pandas as pd
 
-def analyse_improvement(building_name, account_table_pd, 
+def analyse_improvement(building_name, current_level, account_table_pd, 
                         balance_sheet_pd_table):
+    # Analyse if improvement can be supported within current budget and if
+    # net weekly budget is > 0 after improvement
+    #
+    # Inputs:
+    #       - building_name: name of the building to analyse improvement
+    
+    # Adjust for csv file if necessary
+    if building_name in ['Catering','Fanshop','Museum','Office','Stadium']:
+        building_filename = building_name + '.csv'
+    else:
+        building_filename = building_name
+    
     
     ac_t_pd = account_table_pd
     
@@ -26,11 +38,11 @@ def analyse_improvement(building_name, account_table_pd,
     
     buildings = ['Catering.csv','Fanshop.csv','Health','Museum.csv','Office.csv'
                  ,'Scout\'s', 'Stadium.csv', 'Training', 'Youth']
-    i = buildings.index('Youth')
+    i = buildings.index(building_filename)
     
     building = buildings[i]
     
-    bd = pd.read_csv(building, sep=';') # building data
+    bd = pd.read_csv('./Data files/' + building, sep=';') # building data
     # Make correction to the table
     if building in ['Training', 'Youth']:
     # 'Youth' or building == 'Training':
@@ -41,7 +53,6 @@ def analyse_improvement(building_name, account_table_pd,
     #################### Make decision
     # do we have positive net after improving a certain building
     
-    current_level = 0
     next_level_weekly_cost = bd.loc[current_level, 'Weekly costs'] # current_level 
     #is correct, because of indexing
     
@@ -69,5 +80,5 @@ def analyse_improvement(building_name, account_table_pd,
         reason = 'Negative net and negative balance'
         
     
-    return approved_improvement, reason
+    return approved_improvement, reason, weekly_net, updated_weekly_net_without_interest
         

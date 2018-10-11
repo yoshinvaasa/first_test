@@ -1071,3 +1071,116 @@ ATTENTION: default value of option force_s3tc_enable overridden by environment.
 1539027466531	Marionette	INFO	Listening on port 39132
 1539027466568	Marionette	WARN	TLS certificate errors will be ignored for this session
 [Parent 14950, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1539281448500	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.CajTJtZvsEHx"
+1539281452129	Marionette	INFO	Listening on port 38661
+1539281452167	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 13235, Gecko_IOThread] WARNING: pipe error (61): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1539283860753	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.13fZ7RtGwLM3"
+1539283863424	Marionette	INFO	Listening on port 37837
+1539283863471	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 14291, Gecko_IOThread] WARNING: pipe error (52): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1539284048787	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ri2ySSx5MhYm"
+1539284051414	Marionette	INFO	Listening on port 44958
+1539284051507	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 14568, Gecko_IOThread] WARNING: pipe error (70): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1539284248711	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.LQtx88XpVduK"
+1539284251473	Marionette	INFO	Listening on port 36187
+1539284251525	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539285814975	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.HN5NNRkLZ95w"
+1539285817626	Marionette	INFO	Listening on port 39813
+1539285817686	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 15657, Gecko_IOThread] WARNING: pipe error (70): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 14794, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1539285966974	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.2MfNSvUvzL2n"
+1539285969734	Marionette	INFO	Listening on port 43464
+1539285969794	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 15893, Gecko_IOThread] WARNING: pipe error (70): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539286035574	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.b1iBMeg80RBu"
+1539286038357	Marionette	INFO	Listening on port 41341
+1539286038391	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539286549610	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.AYlTRCdwPoKq"
+1539286552270	Marionette	INFO	Listening on port 35450
+1539286552323	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539288043994	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Aa2OpLoVptU2"
+1539288046677	Marionette	INFO	Listening on port 39236
+1539288046714	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://devtools/client/jsonview/converter-observer.js, line 74: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+1539288183569	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.6c2S1CrxVTkp"
+1539288186213	Marionette	INFO	Listening on port 44371
+1539288186292	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539288200616	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.rdUeq8FDo1IG"
+1539288203246	Marionette	INFO	Listening on port 35400
+1539288203339	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 18124, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539288251737	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.LZ8x0E0V5dgJ"
+1539288254393	Marionette	INFO	Listening on port 39846
+1539288254453	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 18333, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1539288509903	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.8ME8LWUnd0sQ"
+1539288512615	Marionette	INFO	Listening on port 43719
+1539288512718	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539288722399	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.flRpIw4joFrU"
+1539288725095	Marionette	INFO	Listening on port 41638
+1539288725112	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 18590, Gecko_IOThread] WARNING: pipe error (70): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 18832, Gecko_IOThread] WARNING: pipe error (84): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1539288820342	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Ce6Op9kb0fx2"
+1539288823028	Marionette	INFO	Listening on port 37734
+1539288823059	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 19055, Gecko_IOThread] WARNING: pipe error (70): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539288875350	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.HlogVLsvq628"
+1539288877966	Marionette	INFO	Listening on port 46045
+1539288878067	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 19265, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1539288948178	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.OWBEx1kvetdh"
+1539288950777	Marionette	INFO	Listening on port 37311
+1539288950787	Marionette	WARN	TLS certificate errors will be ignored for this session
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+JavaScript warning: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/7457079118260738479/scripts/twgl-full.min.js, line 68: Error: WebGL warning: texImage2D: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/7457079118260738479/scripts/twgl-full.min.js, line 68: Error: WebGL warning: texImage2D: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/7457079118260738479/scripts/twgl-full.min.js, line 68: Error: WebGL warning: texImage2D: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/7457079118260738479/scripts/twgl-full.min.js, line 68: Error: WebGL warning: texImage2D: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/7457079118260738479/scripts/twgl-full.min.js, line 68: Error: WebGL warning: texImage2D: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+JavaScript warning: https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/7457079118260738479/scripts/twgl-full.min.js, line 68: Error: WebGL warning: texImage2D: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads.
+1539290454159	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Xb3bAMkuJ6yg"
+1539290457260	Marionette	INFO	Listening on port 33907
+1539290457353	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.EP964e7dqcb4"
+1539290457559	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539290461335	Marionette	INFO	Listening on port 45999
+1539290461368	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539290462913	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/TelemetryFeed.jsm :: uninit :: line 493"  data: no] Stack trace: uninit()@resource://activity-stream/lib/TelemetryFeed.jsm:493
+onAction()@resource://activity-stream/lib/TelemetryFeed.jsm:451
+_middleware/</<()@resource://activity-stream/lib/Store.jsm:51
+Store/this[method]()@resource://activity-stream/lib/Store.jsm:29
+uninit()@resource://activity-stream/lib/Store.jsm:170
+uninit()@resource://activity-stream/lib/ActivityStream.jsm:318
+uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:79
+shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:187
+callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:2757
+observe()@resource://gre/modules/addons/XPIProvider.jsm:1672
+[Parent 20306, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+console.error: PushService: 
+  clearOriginData: Error clearing origin data:
+  UnknownError
+console.error: PushService: 
+  clearOriginData: Error clearing origin data:
+  UnknownError
+console.error: PushService: 
+  stateChangeProcessEnqueue: Error transitioning state
+  UnknownError
+
+###!!! [Parent][DispatchAsyncMessage] Error: PBackgroundIDBFactory::Msg_PBackgroundIDBFactoryRequestConstructor Value error: message was deserialized, but contained an illegal value
+
+
+###!!! [Parent][DispatchAsyncMessage] Error: PBackgroundIDBFactory::Msg_PBackgroundIDBFactoryRequestConstructor Value error: message was deserialized, but contained an illegal value
+
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[Parent 19488, Gecko_IOThread] WARNING: pipe error (70): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 20155, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1539290516188	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.zXSuvqs2scRw"
+1539290518796	Marionette	INFO	Listening on port 32844
+1539290518900	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 20534, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-rIABNe/firefox-61.0.1+linuxmint1+sylvia/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353

@@ -12,16 +12,44 @@ from selenium.webdriver.common.keys import Keys
 from credentials import get_credentials
 import numpy as np
 
+
+def get_players_info(driver):
+    # Takes the driver to the player's page and downloads the information in form
+    # of csv files to local directory
+    time.sleep(3)
+    players_elem = driver.find_element_by_id('menu-entry-players')
+    players_elem.click()
+    
+    time.sleep(2)
+    export_to_csv = driver.find_elements_by_class_name('submit')
+    export_to_csv = export_to_csv[2]
+    export_to_csv.click()
+
+    
+    
+    
+    
 def read_and_get_help_tables(driver):
+    # Takes the driver from any page and exports help information on facilities
+    # to csv files in the local directory
     
     time.sleep(3)
+    
+    help_elem = driver.find_element_by_id('menu-entry-help')
+    help_elem.click()
+    time.sleep(2)
+    # Go to help/facilities
+    facilities_help = driver.find_element_by_css_selector('ul.menu:nth-child(2) > li:nth-child(2) > a:nth-child(1)' )
+    facilities_help.click()
+    
+    
     # Get the Help/Facilities page tabs just under "Facilities reference table"
     facilities_reference_table_menu = driver.find_element_by_xpath('/html/body/div[3]/div[1]/div[2]/div/ul')
     all_tabs = facilities_reference_table_menu.find_elements_by_xpath("./*/*")
     
     
     text = 'Export table to csv/Excel'
-    
+    print('Downloading csv tables to local folder... \n ...')
     for i in np.arange(0,len(all_tabs)):
         time.sleep(2)
         facilities_reference_table_menu = driver.find_element_by_xpath('/html/body/div[3]/div[1]/div[2]/div/ul')
@@ -42,6 +70,8 @@ def get_free_tickets(driver):
     
     
     time.sleep(3)
+    myMatches_elem = driver.find_element_by_id('menu-entry-friendlies')
+    myMatches_elem.send_keys(Keys.RETURN)
     
     free_tickets_elem = driver.find_element_by_class_name("tickets-link")
     free_tickets_elem.send_keys(Keys.RETURN)
@@ -56,6 +86,11 @@ def select_lineup_next_match(driver, line_up_name):
     
     # 1 things need to corrected: 
     # 2. in the case that there are no matches to select the lineup
+    
+    # Go to the matches section
+    time.sleep(3)
+    myMatches_elem = driver.find_element_by_id('menu-entry-friendlies')
+    myMatches_elem.send_keys(Keys.RETURN)
     
     next_selected_lineup = False;
     

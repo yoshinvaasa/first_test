@@ -9,22 +9,77 @@ Created on Fri Oct  5 22:50:08 2018
 import numpy as np
 import time
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 import pandas as pd
 import pickle
 import re
+from action_functions import get_players_info
 
-# Modifications done, data output is now in pandas dataframe type, 
-# as a table
+def read_facilities(driver):
+    time.sleep(3)
+    facilities_elem = driver.find_element_by_id('menu-entry-facilities')
+    facilities_elem.click()
+    time.sleep(3)
+    table = driver.find_element_by_xpath('/html/body/div[3]/div[1]/div[2]/div' \
+                                         '/div/div[4]/table/tbody')
+    x = table.text
+    n_lines = x.count('\n')+1
+    
+    if n_lines == 1:
+        
+        line = x.split()
+        table_lst = [[line[0], int(line[1]), line[2]+line[3], line[-1]]]
+        table_lst[0][2] = int(table_lst[0][2][1:])  # drop the euro sign, store as int
+        facilities_table_pd = pd.DataFrame(data=table_lst, columns=['Building Type',
+                                    'Level', 'Weekly Costs (€)', 'State'])
+    
+    elif n_lines > 1:
+        
+        table_lst = []
+        for i in np.arange(0,n_lines):
+            idx = x.find('\n')
+            line = x[0:idx]
+            line = line.split()
+            col3 = line[2]+line[3]
+            col3 = int(col3[1:]) # drop euro sign
+            table_lst.append([[line[0],int(line[1]),col3,line[-1]]])
+        
+        facilities_table_pd = pd.DataFrame(data=table_lst, columns=['Building Type'
+                                    , 'Level', 'Weekly Costs (€)', 'State'])
 
-# Implementation is slightly different for the 2 read tables from the website
-# corresponding to the next 10 and last 10 matches, due to 
-# different original tables
+    return facilities_table_pd
+    
+
+def read_players_info(driver):
+    # Imports csv file with players' data
+        # Import .csv file with players' data
+    time.sleep(3)
+
+    ## Read csv file
+    file_name = time.strftime('%Y_%m_%d') + '_players.csv'
+    
+    try:
+        players_data = pd.read_csv('./Data files/' + file_name, sep=';')
+        print('Player\'s data read sucessfully! :) ')
+    except FileNotFoundError:
+        print('Player\'s file was not downloaded or not updated to today!' \
+              ' Downloading updated player\'s information... \n ...')
+        
+        get_players_info(driver) # downloaded updated information
+        players_data = read_players_info(driver) # read it
+
+    return players_data
 
 
 def obtain_finance_tables(driver):
-    # Function that given a driver in the "finances" page 
+    # Function that given a driver in any page 
     # goes reads both tables given there and returns dataframe tables
     # for those 2 tables
+    
+    time.sleep(3)
+    finances_elem = driver.find_element_by_id('menu-entry-finances')
+    finances_elem.click()
+    
     
     tables = driver.find_elements_by_tag_name('table')
     balance_sheet_table = tables[0].text
@@ -153,15 +208,25 @@ def obtain_finance_tables(driver):
 
 
 
+# Modifications done, data output is now in pandas dataframe type, 
+# as a table
 
-
+# Implementation is slightly different for the 2 read tables from the website
+# corresponding to the next 10 and last 10 matches, due to 
+# different original tables
 def obtain_fixtures_tables(driver):
-    # From the page "fixtures" the function reads the 2 tables (upcoming and past games)
+    # From any page the function reads the 2 tables (upcoming and past games)
     # and saves the in 2 variables, table and table2
     #
     # Inputs: driver, in the "fixtures" page
     # Outputs: table,table2, 2 dataframe variables with the upcoming 
     #          and past fixtures
+
+    # Go to the matches section
+    time.sleep(3)
+    
+    myMatches_elem = driver.find_element_by_id('menu-entry-friendlies')
+    myMatches_elem.send_keys(Keys.RETURN)
     
     
     time.sleep(4)
@@ -210,6 +275,12 @@ def create_pd_table(original_table,past_10):
     time_format = re.compile('.{2}:.{2}')
     # initialise table as dataframe (pandas)
     table_pd = pd.DataFrame(columns = column_names)
+
+    # If the table consists only of header, then return empty table    
+    if n_lines == 1:
+        table_pd = []
+        return table_pd
+    
     for i in np.arange(1,n_lines+1):
         
         line = table_temp[i].split()
