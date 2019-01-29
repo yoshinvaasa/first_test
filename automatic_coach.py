@@ -19,8 +19,6 @@ from credentials import get_credentials
 url = "https://rockingsoccer.com/en/soccer/"
 url2 = "https://rockingsoccer.com/en/soccer/facilities"
 #
-#username = 'yashar2'
-#password = 'em94p2B*"K,B"9F#I.p3g1H('
 #
 #response = requests.get(url, auth=(username, password), verify=False)
 #
